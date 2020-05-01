@@ -1,0 +1,22 @@
+﻿@model WebAppCore.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+<hr />
+
+<form asp-action="Login" asp-controller="Account">
+    <div>
+        Username : <input type="text"   asp-for="Username" />
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+    <div>
+        Password : <input type="password" asp-for="Password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div>
+        <input type="submit" value="Login" />
+    </div>
+</form>
+
